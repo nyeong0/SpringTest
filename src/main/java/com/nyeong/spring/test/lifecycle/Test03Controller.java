@@ -9,6 +9,7 @@ public class Test03Controller {
 	@RequestMapping("/lifecycle/test03")
 	public String test03View() {
 		
+		// jsp경로
 		return "lifecycle/test03";
 	}
 
