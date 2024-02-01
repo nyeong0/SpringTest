@@ -65,6 +65,7 @@ public class Test02Controller {
 		Text text = new Text("안녕하세요 가입인사", "hagulu", "안녕하세요. 활동열심히");
 		textList.add(text);
 		
+		// new로 새로운 객체 생성했기 때문에 변수이름 재사용가능. heap메모리 참고(주소를 가리킴)
 		text = new Text("헐 대박", "bada", "오늘 목요일..?");
 		textList.add(text);
 		

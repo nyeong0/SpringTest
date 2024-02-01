@@ -10,7 +10,6 @@ public class Text {
 		this.title = title;
 		this.user = user;
 		this.content = content;
-		
 	}
 
 	public String getTitle() {
@@ -36,4 +35,6 @@ public class Text {
 	public void setContent(String content) {
 		this.content = content;
 	}
+	
+	
 }
