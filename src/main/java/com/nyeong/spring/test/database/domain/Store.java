@@ -8,7 +8,7 @@ public class Store {
 	private String name;
 	private String phoneNumber;
 	private String address;
-	private String buisnessNumber;
+	private String businessNumber;
 	private String introduce;
 	private Date createdAt;
 	private Date updatedAt;
@@ -38,11 +38,11 @@ public class Store {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getBuisnessNumber() {
-		return buisnessNumber;
+	public String getbusinessNumber() {
+		return businessNumber;
 	}
-	public void setBuisnessNumber(String buisnessNumber) {
-		this.buisnessNumber = buisnessNumber;
+	public void setbusinessNumber(String businessNumber) {
+		this.businessNumber = businessNumber;
 	}
 	public String getIntroduce() {
 		return introduce;

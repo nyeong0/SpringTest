@@ -12,14 +12,18 @@ import com.nyeong.spring.test.database.service.StoreService;
 
 @Controller
 public class StoreController {
-
+	
 	@Autowired
-	private StoreService storeServise;
+	private StoreService storeService;
 	
 	@ResponseBody
 	@RequestMapping("/db/store/list")
 	public List<Store> storeList(){
-		List<Store> storeList = storeServise.getStoreList();
+		
+		// 가게 정보 리스트를  json으로 response에 담는다
+		// Store 관련 Service Class의 메소드를 통해 가게 정보 리스트를 얻어 온다.
+		List<Store> storeList = storeService.getStoreList();
+		
 		return storeList;
 	}
 	
