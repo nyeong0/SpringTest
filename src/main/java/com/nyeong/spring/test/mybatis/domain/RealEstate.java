@@ -2,6 +2,7 @@ package com.nyeong.spring.test.mybatis.domain;
 
 import java.util.Date;
 
+ // 테이블 이름과 일치하는 클래스
 public class RealEstate {
 	
 	private int id;
@@ -14,10 +15,7 @@ public class RealEstate {
 	private Date createdAt;
 	private Date updatedAt;
 	
-	public RealEstate(int area, int price) {
-		this.area = area;
-		this.price= price;
-	}
+	
 	
 	public int getId() {
 		return id;
