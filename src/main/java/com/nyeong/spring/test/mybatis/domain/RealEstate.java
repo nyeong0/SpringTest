@@ -16,7 +16,6 @@ public class RealEstate {
 	private Date updatedAt;
 	
 	
-	
 	public int getId() {
 		return id;
 	}

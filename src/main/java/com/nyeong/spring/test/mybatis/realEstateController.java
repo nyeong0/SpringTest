@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.nyeong.spring.test.mybatis.domain.RealEstate;
@@ -38,6 +39,28 @@ public class realEstateController {
 		return areaPriceInfo;
 	}
 	
+	
 	@RequestMapping("/insert/1")
+	@ResponseBody
+	public String createRealEstateByObject() {
+		
+		RealEstate realEstate = new RealEstate();
+		realEstate.setRealtorId(3);
+		realEstate.setAddress("푸르지용 리버 303동 1104호");
+		realEstate.setArea(89);
+		realEstate.setType("매매");
+		realEstate.setPrice(100000);
+		
+		int count = realEstateService.addRealEstateByObject(realEstate);
+		
+		return "입력 성공 : " + count;
+	}
+	
+	@RequestMapping("/insert/2")
+	@ResponseBody
+	public String createRealEstate(@RequestParam("realtorId") int realtorId) {
+		int count = realEstateService.addRealEstate(realtorId, "썅떼빌리버 오피스텔 814호", 45, "월세", 1000000, 120);
+		return "입력성공 : " + count;
+	}
 	
 }

@@ -18,5 +18,15 @@ public interface RealEstateRepository {
 			@Param("area") int area, 
 			@Param("price") int price);
 	
+	// 객체 기반의 레퍼지토리는 @Param 필요 없음.
+	public int insertRealEstateByObject(RealEstate realEstate);
+	
+	public int insertRealEstate(
+			@Param("realtorId") int realtorId
+			, @Param("address") String address
+			, @Param("area") int area
+			, @Param("type") String type
+			, @Param("price") int price
+			, @Param("rentPrice") int rentPrice);
 	
 }
