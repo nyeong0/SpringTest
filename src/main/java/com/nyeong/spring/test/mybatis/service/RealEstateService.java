@@ -50,4 +50,15 @@ public class RealEstateService {
 		
 	}
 
+	// id가 23인 매물정보에 type을 전세로, 보증금은 70000으로 변경
+	// 특정 id의 매물 정보에 전달받은 type과 price 값으로 수정하는 기능
+	public int updateRealEstate(int id, String type, int price){
+		int count = realEstateRepository.updateRealEstate(id, type, price);
+		return count;
+	}
+	
+	public int deleteRealEstate(int id) {
+		int count = realEstateRepository.deleteRealEstate(id);
+		return count;
+	}
 }
