@@ -44,7 +44,7 @@ public class realEstateController {
 	@ResponseBody
 	public String createRealEstateByObject() {
 		
-		RealEstate realEstate = new RealEstate();
+		RealEstate realEstate = new RealEstate(); // 공간확보
 		realEstate.setRealtorId(3);
 		realEstate.setAddress("푸르지용 리버 303동 1104호");
 		realEstate.setArea(89);

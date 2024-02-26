@@ -101,7 +101,7 @@
 				,`price`
 				,`rentPrice`
 			)
-		VALUE
+		VALUES
 			(
 				#{realtorId}
 				, #{address}
