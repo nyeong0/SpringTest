@@ -11,4 +11,37 @@
 		VALUES
 		(#{nickname}, #{temperature}, #{profileImage})
 	</insert>
+	
+	<select id="selectLastSeller"
+	resultType="com.nyeong.spring.test.jsp.domain.Seller">
+		SELECT
+			`id`
+			, `nickname`
+			, `temperature`
+			, `profileImage`
+			, `createdAt`
+			, `updatedAt`
+		FROM
+			`seller`
+		ORDER BY
+			`id` DESC
+		LIMIT
+			1
+	
+	</select>
+	
+	<select id="selectSeller" parameterType="int"
+	resultType="com.nyeong.spring.test.jsp.domain.Seller">
+		SELECT
+			`id`
+			, `nickname`
+			, `temperature`
+			, `profileImage`
+			, `createdAt`
+			, `updatedAt`
+		FROM
+			`seller`
+		WHERE
+			`id` = #{id}
+	</select>
 </mapper>
